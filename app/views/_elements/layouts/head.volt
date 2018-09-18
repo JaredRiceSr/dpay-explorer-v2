@@ -37,7 +37,7 @@
       color: #15DF00 !important;
     }
     body.pushable>.pusher {
-      background-image: url('/img/vicewallpaper.jpg') !important;
+      background-image: url('/img/dpaywallpaper.jpg') !important;
       background-position: center;
       background-repeat: no-repeat;
       background-attachment: fixed;
