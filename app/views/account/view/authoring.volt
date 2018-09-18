@@ -22,8 +22,8 @@
       <thead>
         <tr>
           <th>Content</th>
-          <th class="collapsing right aligned">VIT</th>
-          <th class="collapsing right aligned">VP</th>
+          <th class="collapsing right aligned">BEX</th>
+          <th class="collapsing right aligned">BP</th>
           <th class="collapsing right aligned">VEST</th>
         </tr>
       </thead>
@@ -41,7 +41,7 @@
             <?php echo $this->largeNumber::format($reward->dpay_payout); ?> BEX
           </td>
           <td class="collapsing right aligned">
-            ~<?php echo $this->convert::vest2bp($reward->vesting_payout, ""); ?> VP*
+            ~<?php echo $this->convert::vest2bp($reward->vesting_payout, ""); ?> BP*
           </td>
           <td class="collapsing right aligned">
             <div class="ui <?php echo $this->largeNumber::color($reward->vesting_payout)?> label" data-popup data-content="<?php echo number_format($reward->vesting_payout, 3, ".", ",") ?> VESTS" data-variation="inverted" data-position="left center">

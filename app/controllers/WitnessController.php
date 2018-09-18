@@ -63,7 +63,7 @@ class WitnessController extends ControllerBase
         $witness->row_status = "positive";
       }
       // Highlight Red if the signing key is invalid
-      if(!$witness->signing_key || $witness->signing_key == "" || $witness->signing_key == "VIT1111111111111111111111111111111114T1Anm") {
+      if(!$witness->signing_key || $witness->signing_key == "" || $witness->signing_key == "DWB71hoefovfw8xjGiLpxEDBfc2iDJpAVkbR99PZaiLSR8JiYmp6V") {
         $witness->row_status = "negative";
         $witness->invalid_signing_key = true;
       }

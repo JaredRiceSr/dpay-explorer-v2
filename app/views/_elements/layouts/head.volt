@@ -1,6 +1,6 @@
 <head>
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui' />
-  <title>VITdb</title>
+  <title>dPay</title>
   {% if post is defined %}
   <link rel="canonical" href="https://dsite.io/{{ post.category }}/@{{ post.author }}/{{ post.permlink }}"/>
   {% endif %}

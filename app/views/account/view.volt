@@ -60,8 +60,8 @@
                   {{ partial("_elements/vesting_shares", ['current': account]) }}
                 </td>
               </tr>
-              <tr {% if account.vesting_withdraw_rate and account.vesting_withdraw_rate > 1 %}data-popup data-html="<table class='ui small definition table'><tr><td>Power Down - Rate</td><td>-<?php echo $this->convert::vest2bp($current->vesting_withdraw_rate, " VP"); ?></td></tr><tr><td>Power Down - Datetime</td><td><?php echo gmdate("Y-m-d H:i:s e", (string) $account->next_vesting_withdrawal / 1000) ?></td></tr></table>" data-position="left center" data-variation="very wide"{% endif %}>
-                <td>VP</td>
+              <tr {% if account.vesting_withdraw_rate and account.vesting_withdraw_rate > 1 %}data-popup data-html="<table class='ui small definition table'><tr><td>Power Down - Rate</td><td>-<?php echo $this->convert::vest2bp($current->vesting_withdraw_rate, " BP"); ?></td></tr><tr><td>Power Down - Datetime</td><td><?php echo gmdate("Y-m-d H:i:s e", (string) $account->next_vesting_withdrawal / 1000) ?></td></tr></table>" data-position="left center" data-variation="very wide"{% endif %}>
+                <td>BP</td>
                 <td>
                   <div class="ui tiny header">
                     <?php echo $this->convert::vest2bp($current->vesting_shares); ?>

@@ -41,7 +41,7 @@
         <div class="ui centered header">
           No accounts found
           <div class="sub header">
-            VITdb has no record of this account following others.
+            dPay Explorer has no record of this account following others.
           </div>
         </div>
       </td>
