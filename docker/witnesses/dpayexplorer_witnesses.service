@@ -1,0 +1,11 @@
+[Unit]
+Description=DPayExplorer.com Witnesses Service
+
+[Service]
+Environment=dpaynode=dpayd.dpays.io
+WorkingDirectory=/var/www/com_dpayexplorer/docker/witnesses
+ExecStart=/usr/bin/python3 witnesses.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,11 @@
+[Unit]
+Description=DPayExplorer.com Live Service
+
+[Service]
+Environment=dpaynode=dpayd.dpays.io
+WorkingDirectory=/var/www/com_dpayexplorer/docker/live
+ExecStart=/usr/bin/python3 live.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

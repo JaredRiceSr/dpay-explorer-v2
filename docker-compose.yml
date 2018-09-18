@@ -1,0 +1,38 @@
+version: '2'
+services:
+  history:
+    build: ./docker/history
+    environment:
+      dpaynode: "api.dpays.io"
+    links:
+      - mongo
+  sync:
+    build: ./docker/sync
+    environment:
+      dpaynode: "api.dpays.io"
+    links:
+      - mongo
+  witnesses:
+    build: ./docker/witnesses
+    environment:
+      dpaynode: "api.dpays.io"
+    links:
+      - mongo
+  development:
+    build: ./docker/development
+    links:
+      - mongo
+    volumes:
+      - .:/var/www/html
+    ports:
+      - "8680:80"
+  mongodata:
+    image: mongo:3.3.10
+    volumes:
+      - /data/db:/data/db
+    command: --break-mongo
+  mongo:
+    image: mongo:3.3.10
+    volumes_from:
+      - mongodata
+    command: --smallfiles --rest
